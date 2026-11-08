@@ -1,0 +1,6 @@
+raw_photos/
+*.docx
+~$*
+*.tmp
+Thumbs.db
+.DS_Store
