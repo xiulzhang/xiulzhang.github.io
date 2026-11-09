@@ -4,7 +4,7 @@
 
 ## Folder
 - `index.html`: the site.
-- `photo.jpg`: headshot (1000 x 1250, head-to-jacket-hem crop of `raw_photos/headshot_202401.jpg`; shown at 180 px wide).
+- `photo-180.jpg`, `photo-360.jpg`, `photo-540.jpg`: headshot at 1x/2x/3x for the 180 px slot (head-to-jacket-hem crop of `raw_photos/headshot_202401.jpg`, served via `srcset`). To change the headshot, cut the three sizes from the original with Pillow and bump the `?v=` tag on the `<img>`.
 - `img/`: fieldwork photos resized for the web (1400 px long edge, 110 to 360 KB each).
 - `raw_photos/`: the original photos. Not published (listed in `.gitignore`).
 - `cv.pdf`: **missing**. Compile `../CV.tex` on Overleaf (no LaTeX on this machine), download as `cv.pdf`, and put it here.
