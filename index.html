@@ -39,11 +39,11 @@ p { margin: 0 0 1rem; max-width: 66ch; }
 .eyebrow { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 
 .wrap { max-width: 1080px; margin-inline: auto; padding-inline: 20px; padding-block: 2.5rem 4rem; display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-@media (min-width: 860px) { .wrap { grid-template-columns: 300px minmax(0, 1fr); gap: 4rem; } .rail { position: sticky; top: env(safe-area-inset-top, 0px); align-self: start; padding-top: 1rem; } }
+@media (min-width: 860px) { .wrap { grid-template-columns: 280px minmax(0, 1fr); gap: 4rem; } .rail { position: sticky; top: env(safe-area-inset-top, 0px); align-self: start; padding-top: 1rem; } }
 
 /* rail */
 .rail { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
-.photo { width: 300px; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 4px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); position: relative; }
+.photo { width: 180px; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 4px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); position: relative; }
 .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .photo .ph { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--muted); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; padding: 1rem; }
 .photo.has-img .ph { display: none; }
@@ -111,7 +111,7 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--li
 <div class="wrap">
   <aside class="rail">
     <div class="photo" id="photo">
-      <img src="photo.jpg?v=8" alt="Xiuling Zhang" width="1000" height="1250" onload="document.getElementById('photo').classList.add('has-img')" onerror="this.remove()">
+      <img src="photo.jpg?v=9" alt="Xiuling Zhang" width="1000" height="1250" onload="document.getElementById('photo').classList.add('has-img')" onerror="this.remove()">
       <div class="ph">Photo<br>coming soon</div>
     </div>
     <div>

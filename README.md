@@ -4,7 +4,7 @@
 
 ## Folder
 - `index.html`: the site.
-- `photo.jpg`: headshot (720 x 900, cropped from `raw_photos/headshot.jpg`).
+- `photo.jpg`: headshot (1000 x 1250, head-and-shoulders crop of `raw_photos/headshot_upscaled.webp`; shown at 180 px wide).
 - `img/`: fieldwork photos resized for the web (1400 px long edge, 110 to 360 KB each).
 - `raw_photos/`: the original photos. Not published (listed in `.gitignore`).
 - `cv.pdf`: **missing**. Compile `../CV.tex` on Overleaf (no LaTeX on this machine), download as `cv.pdf`, and put it here.
