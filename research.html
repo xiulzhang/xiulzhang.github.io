@@ -70,6 +70,13 @@ section { scroll-margin-top: 1rem; }
 .jmp p { margin: 0.6rem 0 0; font-size: 0.97rem; }
 .jmp .links { margin-top: 0.7rem; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
 
+/* research: papers grouped by topic */
+.topic { margin-top: 2.2rem; }
+.topic:first-of-type { margin-top: 1.2rem; }
+.topic h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); }
+.topic .blurb { color: var(--muted); font-size: 0.95rem; margin: 0.5rem 0 1rem; }
+.topic .pubs { margin-top: 1rem; }
+.jmp .tag { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
 .pubs { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
 .pubs li { padding-left: 1rem; border-left: 1px solid var(--line); min-width: 0; }
 .pubs .t { font-weight: 600; }
@@ -139,36 +146,52 @@ nav a[aria-current="page"] { color: var(--accent); }
   <main>
     <section id="research">
       <p class="eyebrow">Research</p>
-      <h2>Identity, violence, and accountability in Africa</h2>
+      <h2>Identity politics, public goods and foreign investment, and political violence in Africa</h2>
       <p class="prepared">Fields: identity politics, intersectionality, political economy of development, sub-Saharan Africa.</p>
 
-      <h3>Job market paper</h3>
-      <div class="jmp">
-        <div class="t">Whose Ethnicity Counts? Gender, Patriarchy, and Coethnic Voting in Nigeria</div>
-        <p>Decades of research in comparative political behavior show that voters favor coethnic candidates, yet we know little about women's place in ethnic politics. I argue that female candidates face distinct disadvantages in political arenas where ethnic identity is politically salient yet ethnic ascription is structurally patriarchal. Where patrilineal conventions establish men as the primary anchors of ethnic membership, women's ethnic ties carry less weight in establishing coethnic status, leaving them with less ethnic capital to draw upon for electoral support. I examine these dynamics across two crucial dimensions of ethnic ascription: lineage and marriage. Drawing on two conjoint experiments and qualitative fieldwork in Lagos, Nigeria, I show that paternal ethnic ties confer substantially greater electoral returns than maternal ones, regardless of candidate gender. In marriage, male candidates retain coethnic support when marrying outside their group and even gain support from their wives' communities. Female candidates, however, lose support from their ethnic communities of origin without gaining equivalent support from their husbands' communities. Crucially, this penalty holds even among female voters who otherwise favor female candidates. These findings highlight how patriarchal rules of ethnic ascription translate into distinct electoral disadvantages for women.</p>
-        <div class="links"><a class="fn-link" href="fieldnotes.html#note-team">Field note: the team behind the survey</a></div>
+      <div class="topic" id="identity">
+        <h3>Identity Politics</h3>
+        <p class="blurb">How gender, ethnicity, and religion shape whom voters support and whom they hold responsible.</p>
+
+        <div class="jmp">
+          <div class="tag">Job market paper</div>
+          <div class="t">Whose Ethnicity Counts? Gender, Patriarchy, and Coethnic Voting in Nigeria</div>
+          <p>Decades of research in comparative political behavior show that voters favor coethnic candidates, yet we know little about women's place in ethnic politics. I argue that female candidates face distinct disadvantages in political arenas where ethnic identity is politically salient yet ethnic ascription is structurally patriarchal. Where patrilineal conventions establish men as the primary anchors of ethnic membership, women's ethnic ties carry less weight in establishing coethnic status, leaving them with less ethnic capital to draw upon for electoral support. I examine these dynamics across two crucial dimensions of ethnic ascription: lineage and marriage. Drawing on two conjoint experiments and qualitative fieldwork in Lagos, Nigeria, I show that paternal ethnic ties confer substantially greater electoral returns than maternal ones, regardless of candidate gender. In marriage, male candidates retain coethnic support when marrying outside their group and even gain support from their wives' communities. Female candidates, however, lose support from their ethnic communities of origin without gaining equivalent support from their husbands' communities. Crucially, this penalty holds even among female voters who otherwise favor female candidates. These findings highlight how patriarchal rules of ethnic ascription translate into distinct electoral disadvantages for women.</p>
+          <div class="links"><a class="fn-link" href="fieldnotes.html#note-team">Field note: the team behind the survey</a></div>
+        </div>
+
+        <ul class="pubs">
+          <li><div class="t">Victim Identity and Political Blame: Evidence from Nigeria</div><div class="m">Solo-authored. <span class="status">Under review</span></div><div class="note">Factorial vignette experiments in Lagos and Maiduguri show that citizens blame politicians more when victims share their religion, and that this bias disappears where violence is perceived as indiscriminate.</div></li>
+        </ul>
       </div>
 
-      <h3>Peer-reviewed publications</h3>
-      <ul class="pubs">
-        <li><div class="t"><a href="https://peace-democracy.org/board/bbs/board.php?bo_table=journal_main&amp;wr_id=26">The US Inspires Dreams and China Gets Things Done: Gauging Global South Attachments to Major Powers with Evidence from Nigeria</a></div><div class="m">with John McCauley. <span class="status">Forthcoming, Peace &amp; Democracy</span> <a class="fn-link" href="fieldnotes.html#note-train">Field note</a></div></li>
-      </ul>
+      <div class="topic" id="goods">
+        <h3>Public Goods and Foreign Investment</h3>
+        <p class="blurb">What citizens want from government programmes and foreign-funded projects, and how they judge the powers behind them.</p>
+        <ul class="pubs">
+          <li><div class="t"><a href="https://peace-democracy.org/board/bbs/board.php?bo_table=journal_main&amp;wr_id=26">The US Inspires Dreams and China Gets Things Done: Gauging Global South Attachments to Major Powers with Evidence from Nigeria</a></div><div class="m">with John McCauley. <span class="status">Forthcoming, Peace &amp; Democracy</span> <a class="fn-link" href="fieldnotes.html#note-train">Field note</a></div></li>
+          <li><div class="t">Project Characteristics and Preferences over Foreign-Funded Initiatives: Evidence from Nigeria</div><div class="m">with John McCauley. <span class="status">Revise &amp; resubmit, Studies in Comparative International Development</span> <a class="fn-link" href="fieldnotes.html#note-train">Field note</a></div></li>
+          <li><div class="t">Do Road Networks Mitigate or Amplify the Spatial Heterogeneity of Urban Public Goods?</div><div class="m">Mushixue Zhang, Ge Shi, Jiantao Shi, Xiuling Zhang, Wei Wang, Lihang Feng, and Chuang Chen. <span class="status">Revise &amp; resubmit, Symmetry</span></div></li>
+          <li><div class="t">Eligibility, Identity, and Preferences for Programmatic Goods in Nigeria</div><div class="m">Solo-authored. <span class="status">Work in progress</span> <a class="fn-link" href="fieldnotes.html#note-lagos">Field note</a></div></li>
+        </ul>
+      </div>
 
-      <h3>Under review</h3>
-      <ul class="pubs">
-        <li><div class="t">The Democratic Costs of Terrorist Attacks in Africa</div><div class="m">with John McCauley and Trey Billing. <span class="status">Revise &amp; resubmit, Journal of Conflict Resolution</span></div><div class="note">Geocoded attacks linked to Afrobarometer surveys: attacks depress satisfaction with democracy and trust in the president within months, and non-fatal attacks do so as much as fatal ones.</div></li>
-        <li><div class="t">Project Characteristics and Preferences over Foreign-Funded Initiatives: Evidence from Nigeria</div><div class="m">with John McCauley. <span class="status">Revise &amp; resubmit, Studies in Comparative International Development</span> <a class="fn-link" href="fieldnotes.html#note-train">Field note</a></div></li>
-        <li><div class="t">Victim Identity and Political Blame: Evidence from Nigeria</div><div class="m">Solo-authored. <span class="status">Under review</span></div><div class="note">Factorial vignette experiments in Lagos and Maiduguri show that citizens blame politicians more when victims share their religion, and that this bias disappears where violence is perceived as indiscriminate.</div></li>
-        <li><div class="t">Do Road Networks Mitigate or Amplify the Spatial Heterogeneity of Urban Public Goods?</div><div class="m">Mushixue Zhang, Ge Shi, Jiantao Shi, Xiuling Zhang, Wei Wang, Lihang Feng, and Chuang Chen. <span class="status">Revise &amp; resubmit, Symmetry</span></div></li>
-        <li><div class="t">Spatiotemporal Evolution and Nonlinear Factors Influencing Carbon Emissions in Nigeria</div><div class="m">Ge Shi, Yueming Zeng, Jiantao Shi, Boyuan Lu, Xiuling Zhang, Lin Sun, and Wei Wang. <span class="status">Revise &amp; resubmit, ISPRS International Journal of Geo-Information</span></div></li>
-      </ul>
+      <div class="topic" id="violence">
+        <h3>Political Violence</h3>
+        <p class="blurb">How terrorist attacks reshape citizens' trust in democracy, their leaders, and their faith.</p>
+        <ul class="pubs">
+          <li><div class="t">The Democratic Costs of Terrorist Attacks in Africa</div><div class="m">with John McCauley and Trey Billing. <span class="status">Revise &amp; resubmit, Journal of Conflict Resolution</span></div><div class="note">Geocoded attacks linked to Afrobarometer surveys: attacks depress satisfaction with democracy and trust in the president within months, and non-fatal attacks do so as much as fatal ones.</div></li>
+          <li><div class="t">Terrorist Attacks and the Religiosity of Survivors</div><div class="m">with John McCauley and Trey Billing. <span class="status">Work in progress</span> Draft available upon request.</div></li>
+        </ul>
+      </div>
 
-      <h3>Work in progress</h3>
-      <ul class="pubs">
-        <li><div class="t">Terrorist Attacks and the Religiosity of Survivors</div><div class="m">with John McCauley and Trey Billing. Draft available upon request.</div></li>
-        <li><div class="t">Eligibility, Identity, and Preferences for Programmatic Goods in Nigeria</div><div class="m">Solo-authored. <a class="fn-link" href="fieldnotes.html#note-lagos">Field note</a></div></li>
-        <li><div class="t">Optimal Block Design for Vignette and Conjoint Experiments in Political Science</div><div class="m">with Peter Steiner</div></li>
-      </ul>
+      <div class="topic" id="other">
+        <h3>Methods and Other Collaborations</h3>
+        <ul class="pubs">
+          <li><div class="t">Optimal Block Design for Vignette and Conjoint Experiments in Political Science</div><div class="m">with Peter Steiner. <span class="status">Work in progress</span></div></li>
+          <li><div class="t">Spatiotemporal Evolution and Nonlinear Factors Influencing Carbon Emissions in Nigeria</div><div class="m">Ge Shi, Yueming Zeng, Jiantao Shi, Boyuan Lu, Xiuling Zhang, Lin Sun, and Wei Wang. <span class="status">Revise &amp; resubmit, ISPRS International Journal of Geo-Information</span></div></li>
+        </ul>
+      </div>
     </section>
     <footer>Xiuling Zhang, 2026. Photographs from fieldwork in Nigeria.</footer>
   </main>
