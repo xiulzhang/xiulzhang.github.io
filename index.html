@@ -105,6 +105,8 @@ section { scroll-margin-top: 1rem; }
 .prepared { color: var(--muted); font-size: 0.95rem; }
 .cvbox { background: var(--surface); border: 1px solid var(--line); padding: 1rem 1.2rem; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; align-items: baseline; }
 footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+nav a[aria-current="page"] { color: var(--accent); }
+.pdf { display: block; width: 100%; height: 82vh; margin-top: 1.25rem; border: 1px solid var(--line); border-radius: 4px; }
 </style>
 </head>
 <body>
@@ -118,14 +120,14 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--li
       <h1>Xiuling Zhang</h1>
       <div class="title">Ph.D. Candidate, Government and Politics<br>University of Maryland, College Park</div>
     </div>
-    <nav aria-label="Sections">
+    <nav aria-label="Pages">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#fieldnotes">Field notes</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="fieldnotes.html">Field notes</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="contact">
@@ -137,113 +139,11 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--li
   <main>
     <section id="about">
       <p class="eyebrow">About</p>
-      <p class="lede">Hi, 你好, welcome to my website.</p>
-      <p>I am a Ph.D. candidate in Government and Politics at the University of Maryland, College Park. My research combines original survey, vignette, and conjoint experiments in Nigeria with geocoded conflict data and cross-national surveys from across Africa, and with computational text methods applied to African political speech and media. I hold an M.A. in African Studies from UCLA and a B.A. in International Politics and Economics from Peking University.</p>
+      <p class="lede">Welcome to my website! I am a Ph.D. candidate in Government and Politics at the University of Maryland, College Park.</p>
+      <p>I study comparative political behavior and the political economy of development in Sub-Saharan Africa, with a focus on the political consequences of identity biases. My dissertation investigates how patrilineal ethnic systems interact with gender to create distinct structural challenges for women’s political representation. Methodologically, my work integrates causal inference, computational tools, and qualitative field research.</p>
+      <p>I hold an M.A. in African Studies from UCLA and a dual B.A. in International Politics and Economics from Peking University.</p>
       <p>I am on the 2026-27 academic job market.</p>
-    </section>
-
-    <section id="research">
-      <p class="eyebrow">Research</p>
-      <h2>Identity, violence, and accountability in Africa</h2>
-      <p class="prepared">Fields: identity politics, intersectionality, political economy of development, sub-Saharan Africa.</p>
-
-      <h3>Job market paper</h3>
-      <div class="jmp">
-        <div class="t">Whose Ethnicity Counts? Gender, Patriarchy, and Coethnic Voting in Nigeria</div>
-        <p>Decades of research in comparative political behavior show that voters favor coethnic candidates, yet we know little about women's place in ethnic politics. I argue that female candidates face distinct disadvantages in political arenas where ethnic identity is politically salient yet ethnic ascription is structurally patriarchal. Where patrilineal conventions establish men as the primary anchors of ethnic membership, women's ethnic ties carry less weight in establishing coethnic status, leaving them with less ethnic capital to draw upon for electoral support. I examine these dynamics across two crucial dimensions of ethnic ascription: lineage and marriage. Drawing on two conjoint experiments and qualitative fieldwork in Lagos, Nigeria, I show that paternal ethnic ties confer substantially greater electoral returns than maternal ones, regardless of candidate gender. In marriage, male candidates retain coethnic support when marrying outside their group and even gain support from their wives' communities. Female candidates, however, lose support from their ethnic communities of origin without gaining equivalent support from their husbands' communities. Crucially, this penalty holds even among female voters who otherwise favor female candidates. These findings highlight how patriarchal rules of ethnic ascription translate into distinct electoral disadvantages for women.</p>
-        <div class="links"><a class="fn-link" href="#note-team">Field note: the team behind the survey</a></div>
-      </div>
-
-      <h3>Peer-reviewed publications</h3>
-      <ul class="pubs">
-        <li><div class="t"><a href="https://peace-democracy.org/board/bbs/board.php?bo_table=journal_main&amp;wr_id=26">The US Inspires Dreams and China Gets Things Done: Gauging Global South Attachments to Major Powers with Evidence from Nigeria</a></div><div class="m">with John McCauley. <span class="status">Forthcoming, Peace &amp; Democracy</span> <a class="fn-link" href="#note-train">Field note</a></div></li>
-      </ul>
-
-      <h3>Under review</h3>
-      <ul class="pubs">
-        <li><div class="t">The Democratic Costs of Terrorist Attacks in Africa</div><div class="m">with John McCauley and Trey Billing. <span class="status">Revise &amp; resubmit, Journal of Conflict Resolution</span></div><div class="note">Geocoded attacks linked to Afrobarometer surveys: attacks depress satisfaction with democracy and trust in the president within months, and non-fatal attacks do so as much as fatal ones.</div></li>
-        <li><div class="t">Project Characteristics and Preferences over Foreign-Funded Initiatives: Evidence from Nigeria</div><div class="m">with John McCauley. <span class="status">Revise &amp; resubmit, Studies in Comparative International Development</span> <a class="fn-link" href="#note-train">Field note</a></div></li>
-        <li><div class="t">Victim Identity and Political Blame: Evidence from Nigeria</div><div class="m">Solo-authored. <span class="status">Under review</span></div><div class="note">Factorial vignette experiments in Lagos and Maiduguri show that citizens blame politicians more when victims share their religion, and that this bias disappears where violence is perceived as indiscriminate.</div></li>
-        <li><div class="t">Do Road Networks Mitigate or Amplify the Spatial Heterogeneity of Urban Public Goods?</div><div class="m">Mushixue Zhang, Ge Shi, Jiantao Shi, Xiuling Zhang, Wei Wang, Lihang Feng, and Chuang Chen. <span class="status">Revise &amp; resubmit, Symmetry</span></div></li>
-        <li><div class="t">Spatiotemporal Evolution and Nonlinear Factors Influencing Carbon Emissions in Nigeria</div><div class="m">Ge Shi, Yueming Zeng, Jiantao Shi, Boyuan Lu, Xiuling Zhang, Lin Sun, and Wei Wang. <span class="status">Revise &amp; resubmit, ISPRS International Journal of Geo-Information</span></div></li>
-      </ul>
-
-      <h3>Work in progress</h3>
-      <ul class="pubs">
-        <li><div class="t">Terrorist Attacks and the Religiosity of Survivors</div><div class="m">with John McCauley and Trey Billing. Draft available upon request.</div></li>
-        <li><div class="t">Eligibility, Identity, and Preferences for Programmatic Goods in Nigeria</div><div class="m">Solo-authored. <a class="fn-link" href="#note-lagos">Field note</a></div></li>
-        <li><div class="t">Optimal Block Design for Vignette and Conjoint Experiments in Political Science</div><div class="m">with Peter Steiner</div></li>
-      </ul>
-    </section>
-
-    <section id="teaching">
-      <p class="eyebrow">Teaching</p>
-      <h2>Courses at the University of Maryland</h2>
-      <dl class="courses">
-        <div><dt>GVPT 484</dt><dd><strong>Government and Politics of Africa</strong>, instructor of record, Fall 2025</dd></div>
-        <div><dt>GVPT 354</dt><dd><strong>International Development and Conflict Management</strong>, instructor of record, Summer 2025 and Summer 2026. Students map a live conflict and write a mock development proposal to a funder.</dd></div>
-        <div><dt>GVPT 203</dt><dd><strong>The Challenge of Authoritarianism</strong>, teaching assistant, Spring 2026</dd></div>
-      </dl>
-      <p class="prepared">Prepared to teach: Introduction to Comparative Politics; Politics of Africa; Political Violence and Its Aftermath; Politics of Development and Foreign Aid; Identity, Ethnicity, and Gender in Politics; Experimental Design for Social Science; Text Analysis and Large Language Models for Social Science.</p>
-    </section>
-
-    <section id="fieldnotes">
-      <p class="eyebrow">Field notes</p>
-      <h2>Stories behind the papers</h2>
-      <p class="notes-intro">Experiments look tidy on the page. These are a few photographs from the fieldwork in Nigeria that produced them, with the part of the story that does not fit in a methods section.</p>
-
-      <!-- Each story: a .tag naming the paper, a title, photos, two or three sentences, and a link back to the paper.
-           To add a story, copy one <article class="story"> block. Photo widths: w8 + w4 (one wide, one narrow), w6 + w6 (two equal), or a single w12 figure. Add class "tall" for portrait photos. -->
-
-      <article class="story" id="note-team">
-        <div>
-          <div class="tag">Job market paper</div>
-          <h3>The team behind two thousand doorsteps</h3>
-        </div>
-        <div class="shots">
-          <figure class="w12"><a href="img/team.jpg"><img src="img/team.jpg" width="1400" height="1050" loading="lazy" alt="Xiuling Zhang with six research assistants standing in front of pine trees and a university building in Lagos"></a><figcaption>The enumerator team in Lagos.</figcaption></figure>
-        </div>
-        <p>The conjoint experiments in my job market paper were not run online. Enumerators carried tablets through neighborhoods across Lagos State, starting from a randomly chosen point, knocking on every fifth door, and reading candidate profiles aloud to 2,117 adults between August and October 2026. Before any of that could happen, this team spent days in training arguing with me about wording: how to describe a candidate's mother's ethnicity so that a respondent hears it as ordinary biography rather than as a strange question.</p>
-        <p>Those arguments shaped the design more than any referee has. The finding that a father's ethnicity carries more electoral weight than a mother's came out of their doorsteps, and so did the enumerator fixed effects in every table.</p>
-        <p class="back"><a href="#research">Back to the job market paper</a></p>
-      </article>
-
-      <article class="story" id="note-lagos">
-        <div>
-          <div class="tag">Programmatic goods and identity</div>
-          <h3>The city is yours</h3>
-        </div>
-        <div class="shots">
-          <figure class="w6"><a href="img/lagos-night.jpg"><img src="img/lagos-night.jpg" width="1400" height="1050" loading="lazy" alt="Outdoor bar at night in Lagos, with a neon sign reading The City Is Yours and a crowd watching football on a large screen"></a><figcaption>Football night under a sign that every Lagosian seems to believe.</figcaption></figure>
-          <figure class="w6"><a href="img/gameday.jpg"><img src="img/gameday.jpg" width="1400" height="1050" loading="lazy" alt="Xiuling Zhang and five research assistants gathered around a table of takeaway bags in a Lagos restaurant"></a><figcaption>Match day with the research assistants, after the day's interviews.</figcaption></figure>
-        </div>
-        <p>Lagos is a city of arrivals. People from every part of Nigeria come to make a living there, and the sign says what the city promises them. My research asks what that promise means in practice: whether a politician's ethnicity still decides who is believed to deserve a health center or a cash transfer, and whether clear eligibility rules can loosen that grip.</p>
-        <p>The evening debriefs over football and takeaway are where fieldwork actually happens. This is where I learned which questions respondents laughed at, which ones made them uncomfortable, and which programs they had seen promised and never delivered. Several items in the survey were rewritten after nights like this one.</p>
-        <p class="back"><a href="#research">Back to the research</a></p>
-      </article>
-
-      <article class="story" id="note-train">
-        <div>
-          <div class="tag">China, the United States, and Nigeria</div>
-          <h3>Getting things done</h3>
-        </div>
-        <div class="shots">
-          <figure class="w12"><a href="img/train.jpg"><img src="img/train.jpg" width="1400" height="1050" loading="lazy" alt="A passenger train carriage at a station platform, wrapped in a colorful advertisement reading I love my Ibadan"></a><figcaption>A coach on the Lagos to Ibadan standard-gauge line.</figcaption></figure>
-          <figure class="w6 tall"><a href="img/train-inside.jpg"><img src="img/train-inside.jpg" width="1050" height="1400" loading="lazy" alt="Interior of a passenger train carriage with rows of red and blue seats"></a><figcaption>Inside the carriage.</figcaption></figure>
-          <figure class="w6 tall"><a href="img/train-washroom.jpg"><img src="img/train-washroom.jpg" width="1050" height="1400" loading="lazy" alt="Washroom of a train carriage, with the photographer reflected in the mirror"></a><figcaption>The washroom, and the researcher.</figcaption></figure>
-        </div>
-        <p>The railway between Lagos and Ibadan was built by a Chinese contractor and is wrapped, inside and out, in Nigerian life: instant noodle advertisements, a celebration of Ibadan, families with luggage heading home. Riding it is the closest thing to a field visit for the question John McCauley and I ask in our Nigeria surveys. When citizens of the Global South compare the major powers, do they reward the one whose values they admire, or the one that shows up and builds?</p>
-        <p>Our respondents say both, in different registers. The United States inspires aspirations; China is credited with getting things done. The paper on project characteristics follows up by asking which features of a foreign-funded project, from who builds it to who benefits, move Nigerians' support, independently of the flag on the sign.</p>
-        <p class="back"><a href="#research">Back to the research</a></p>
-      </article>
-    </section>
-
-    <section id="cv">
-      <p class="eyebrow">Curriculum vitae</p>
-      <div class="cvbox">
-        <a href="cv.pdf">Download CV (PDF)</a>
-        <span class="prepared">Last updated November 2026</span>
-      </div>
+      <p>Thank you for visiting! You can find my full CV <a href="cv.pdf">here</a>.</p>
     </section>
 
     <section id="contact">
@@ -251,7 +151,6 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--li
       <p>Department of Government and Politics, 3140 Tydings Hall, University of Maryland, College Park, MD 20742.<br>Email: <code style="font-family: var(--mono); user-select: all;">xlzhang@umd.edu</code></p>
       <!-- Add links when ready: Google Scholar, GitHub, LinkedIn, ORCID -->
     </section>
-
     <footer>Xiuling Zhang, 2026. Photographs from fieldwork in Nigeria.</footer>
   </main>
 </div>
