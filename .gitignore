@@ -4,3 +4,4 @@ raw_photos/
 *.tmp
 Thumbs.db
 .DS_Store
+font/*.otf

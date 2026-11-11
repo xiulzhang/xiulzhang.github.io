@@ -5,196 +5,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Xiuling Zhang, political scientist. Identity and gender in ethnic politics, political violence and accountability, and the political economy of development in Africa.">
 <title>Research | Xiuling Zhang</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
-<style>
-/* Layout: a narrow reading column with a left-hand name/nav rail on wide screens; indigo (adire cloth) as the single accent. */
-:root {
-  --bg: #faf8f3;        /* warm paper */
-  --surface: #f1ede4;
-  --fg: #1d1c1a;
-  --muted: #5d5a53;
-  --line: #d9d3c6;
-  --accent: #1f3f6e;    /* indigo */
-  --accent-soft: #dde6f2;
-  --display: "Spectral", Georgia, "Times New Roman", serif;
-  --body: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
-  --mono: "IBM Plex Mono", Consolas, monospace;
-}
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #15171c; --surface: #1d2027; --fg: #e9e6df; --muted: #a9a59b; --line: #343841; --accent: #9dbbe6; --accent-soft: #223149; color-scheme: dark; } }
-:root[data-theme="dark"] {
-  --bg: #15171c; --surface: #1d2027; --fg: #e9e6df; --muted: #a9a59b; --line: #343841; --accent: #9dbbe6; --accent-soft: #223149; color-scheme: dark; }
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.2; text-wrap: balance; margin: 0; }
-h1 { font-size: 2.1rem; letter-spacing: -0.01em; }
-h2 { font-size: 1.1rem; font-weight: 400; color: var(--muted); margin-block: 0 1.25rem; }
-h3 { font-size: 1.1rem; font-weight: 600; margin-block: 1.4rem 0.4rem; font-family: var(--body); }
-p { margin: 0 0 1rem; max-width: 66ch; }
-.eyebrow { font-family: var(--display); font-size: 1.75rem; font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 0.35rem; }
-
-.wrap { max-width: 1080px; margin-inline: auto; padding-inline: 20px; padding-block: 2.5rem 4rem; display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-@media (min-width: 860px) { .wrap { grid-template-columns: 280px minmax(0, 1fr); gap: 4rem; } .rail { position: sticky; top: env(safe-area-inset-top, 0px); align-self: start; padding-top: 1rem; } }
-
-/* rail */
-.rail { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
-.photo { width: 180px; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 4px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); position: relative; }
-.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.photo .ph { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--muted); font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; padding: 1rem; }
-.photo.has-img .ph { display: none; }
-.rail .title { color: var(--muted); font-size: 0.95rem; line-height: 1.45; }
-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
-@media (min-width: 860px) { nav ul { flex-direction: column; gap: 0.35rem; border-left: 2px solid var(--line); padding-left: 0.9rem; } }
-nav a { text-decoration: none; color: var(--fg); font-weight: 500; }
-nav a:hover { color: var(--accent); }
-.contact { font-size: 0.9rem; color: var(--muted); display: grid; gap: 0.3rem; }
-.contact code { font-family: var(--mono); font-size: 0.85rem; color: var(--fg); user-select: all; }
-
-/* main */
-main { min-width: 0; display: grid; gap: 3rem; }
-section { scroll-margin-top: 1rem; }
-.lede { font-family: var(--display); font-size: 1.25rem; line-height: 1.5; max-width: 60ch; }
-.strands { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 1rem; }
-.strand { border-top: 2px solid var(--accent); padding-top: 0.7rem; min-width: 0; }
-.strand h3 { margin-top: 0; }
-.strand p { font-size: 0.95rem; color: var(--muted); margin: 0; }
-
-/* job market paper */
-.jmp { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 4px; padding: 1.1rem 1.3rem; margin-top: 0.4rem; }
-.jmp .t { font-family: var(--display); font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
-.jmp p { margin: 0.6rem 0 0; font-size: 0.97rem; }
-.jmp .links { margin-top: 0.7rem; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
-
-/* research: papers grouped by topic */
-.topic { margin-top: 2.2rem; }
-.topic:first-of-type { margin-top: 1.2rem; }
-.topic h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); }
-.topic .blurb { color: var(--muted); font-size: 0.95rem; margin: 0.5rem 0 1rem; }
-.topic .pubs { margin-top: 1rem; }
-.jmp .tag { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
-.pubs { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
-.pubs li { padding-left: 1rem; border-left: 1px solid var(--line); min-width: 0; }
-.pubs .t { font-weight: 600; }
-.pubs .m { color: var(--muted); font-size: 0.93rem; }
-.pubs .status { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); background: var(--accent-soft); padding: 0.05rem 0.45rem; border-radius: 3px; white-space: nowrap; }
-.pubs .note { font-size: 0.93rem; color: var(--muted); margin-top: 0.2rem; }
-.fn-link { font-size: 0.85rem; font-family: var(--mono); white-space: nowrap; }
-
-/* field notes: one story per paper, photos first, two or three sentences of story, a pointer back to the paper */
-.notes-intro { color: var(--muted); }
-.story { display: grid; gap: 1rem; padding-top: 1.6rem; margin-top: 1.6rem; border-top: 1px solid var(--line); scroll-margin-top: 1rem; }
-.story:first-of-type { border-top: 0; margin-top: 0; padding-top: 0.4rem; }
-.story h3 { margin-top: 0; font-family: var(--display); font-weight: 600; font-size: 1.25rem; }
-.story .tag { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
-.story p { font-size: 0.97rem; }
-.story .back { font-size: 0.9rem; }
-.shots { display: grid; gap: 0.6rem; grid-template-columns: repeat(12, 1fr); margin: 0; }
-.shots figure { margin: 0; min-width: 0; grid-column: span 12; }
-.shots a { display: block; border-radius: 4px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
-.shots img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
-.shots .tall img { aspect-ratio: 3 / 4; }
-.shots figcaption { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; line-height: 1.45; }
-@media (min-width: 640px) {
-  .shots .w8 { grid-column: span 8; }
-  .shots .w4 { grid-column: span 4; }
-  .shots .w6 { grid-column: span 6; }
-}
-
-.courses { display: grid; gap: 0.6rem; margin: 0; }
-.courses div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.5rem 1rem; }
-.courses dt { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); padding-top: 0.2rem; }
-.courses dd { margin: 0; }
-.prepared { color: var(--muted); font-size: 0.95rem; }
-.cvbox { background: var(--surface); border: 1px solid var(--line); padding: 1rem 1.2rem; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; align-items: baseline; }
-footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 1rem; }
-nav a[aria-current="page"] { color: var(--accent); }
-.pdf { display: block; width: 100%; height: 82vh; margin-top: 1.25rem; border: 1px solid var(--line); border-radius: 4px; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
+<header class="hero"><img src="img/hero.jpg?v=4" width="1408" height="570" alt="An outdoor bar in Lagos at night: a neon sign reads The City Is Yours and a crowd watches football on a big screen"></header>
 <div class="wrap">
-  <aside class="rail">
-    <div class="photo" id="photo">
-      <img src="photo-360.jpg?v=13" srcset="photo-180.jpg?v=13 180w, photo-360.jpg?v=13 360w, photo-540.jpg?v=13 540w" sizes="180px" alt="Xiuling Zhang" width="1000" height="1250" onload="document.getElementById('photo').classList.add('has-img')" onerror="this.remove()">
-      <div class="ph">Photo<br>coming soon</div>
-    </div>
-    <div>
-      <h1>Xiuling Zhang</h1>
-      <div class="title">Ph.D. Candidate, Government and Politics<br>University of Maryland, College Park</div>
-    </div>
-    <nav aria-label="Pages">
+  <aside class="side">
+    <h1><a href="index.html">Xiuling Zhang</a></h1>
+    <div class="zh" lang="zh-Hans">张琇玲</div>
+    <div class="photo"><img src="photo-360.jpg?v=13" srcset="photo-180.jpg?v=13 180w, photo-360.jpg?v=13 360w, photo-540.jpg?v=13 540w" sizes="200px" alt="Xiuling Zhang" width="1000" height="1250"></div>
+    <div class="title">Ph.D. Candidate<br>Department of Government and Politics<br>University of Maryland, College Park</div>
+    <ul class="links">
+      <li><a href="mailto:xlzhang@umd.edu">xlzhang@umd.edu</a></li>
+      <li><a href="cv.pdf">CV (PDF)</a></li>
+      <!-- Add when ready: <li><a href="...">Google Scholar</a></li> -->
+    </ul>
+  </aside>
+
+  <div class="content">
+    <nav class="tabs" aria-label="Pages">
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="research.html" aria-current="page">Research</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="fieldnotes.html">Field notes</a></li>
+        <li><a href="fieldwork.html">Fieldwork Gallery</a></li>
         <li><a href="cv.html">CV</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="contact">
-      <span>Email</span>
-      <code>xlzhang@umd.edu</code>
-    </div>
-  </aside>
-
-  <main>
-    <section id="research">
-      <p class="eyebrow">Research</p>
-      <h2>Identity politics, public goods and foreign investment, and political violence in Africa</h2>
-      <p class="prepared">Fields: identity politics, intersectionality, political economy of development, sub-Saharan Africa.</p>
-
+    <main>
       <div class="topic" id="identity">
-        <h3>Identity Politics</h3>
-        <p class="blurb">How gender, ethnicity, and religion shape whom voters support and whom they hold responsible.</p>
-
-        <div class="jmp">
-          <div class="tag">Job market paper</div>
-          <div class="t">Whose Ethnicity Counts? Gender, Patriarchy, and Coethnic Voting in Nigeria</div>
-          <p>Decades of research in comparative political behavior show that voters favor coethnic candidates, yet we know little about women's place in ethnic politics. I argue that female candidates face distinct disadvantages in political arenas where ethnic identity is politically salient yet ethnic ascription is structurally patriarchal. Where patrilineal conventions establish men as the primary anchors of ethnic membership, women's ethnic ties carry less weight in establishing coethnic status, leaving them with less ethnic capital to draw upon for electoral support. I examine these dynamics across two crucial dimensions of ethnic ascription: lineage and marriage. Drawing on two conjoint experiments and qualitative fieldwork in Lagos, Nigeria, I show that paternal ethnic ties confer substantially greater electoral returns than maternal ones, regardless of candidate gender. In marriage, male candidates retain coethnic support when marrying outside their group and even gain support from their wives' communities. Female candidates, however, lose support from their ethnic communities of origin without gaining equivalent support from their husbands' communities. Crucially, this penalty holds even among female voters who otherwise favor female candidates. These findings highlight how patriarchal rules of ethnic ascription translate into distinct electoral disadvantages for women.</p>
-          <div class="links"><a class="fn-link" href="fieldnotes.html#note-team">Field note: the team behind the survey</a></div>
-        </div>
-
-        <ul class="pubs">
-          <li><div class="t">Victim Identity and Political Blame: Evidence from Nigeria</div><div class="m">Solo-authored. <span class="status">Under review</span></div><div class="note">Factorial vignette experiments in Lagos and Maiduguri show that citizens blame politicians more when victims share their religion, and that this bias disappears where violence is perceived as indiscriminate.</div></li>
-        </ul>
+        <h2>Politics of Identity</h2>
+        <article class="paper" id="jmp">
+          <h3>Whose Ethnicity Counts? Gender, Patriarchy, and Coethnic Voting in Nigeria</h3>
+          <div class="m"><span class="status">Job Market Paper</span></div>
+          <details><summary>Abstract</summary><p>Decades of research in comparative political behavior show that voters favor coethnic candidates, yet we know little about women's place in ethnic politics. I argue that female candidates face distinct disadvantages in political arenas where ethnic identity is politically salient yet ethnic ascription is structurally patriarchal. Where patrilineal conventions establish men as the primary anchors of ethnic membership, women's ethnic ties carry less weight in establishing coethnic status, leaving them with less ethnic capital to draw upon for electoral support. I examine these dynamics across two crucial dimensions of ethnic ascription: lineage and marriage. Drawing on two conjoint experiments and qualitative fieldwork in Lagos, Nigeria, I show that paternal ethnic ties confer substantially greater electoral returns than maternal ones, regardless of candidate gender. In marriage, male candidates retain coethnic support when marrying outside their group and even gain support from their wives' communities. Female candidates, however, lose support from their ethnic communities of origin without gaining equivalent support from their husbands' communities. Crucially, this penalty holds even among female voters who otherwise favor female candidates. These findings highlight how patriarchal rules of ethnic ascription translate into distinct electoral disadvantages for women.</p></details>
+        </article>
+        <article class="paper">
+          <h3>Victim Identity and Political Blame: Evidence from Nigeria</h3>
+          <div class="m"><span class="status">Under Review</span></div>
+          <details><summary>Abstract</summary><p>Political blame following crisis is central to democratic accountability, yet citizens do not assign it impartially. Existing work locates this bias in citizens’ attachments to politicians. This study argues that citizens also condition blame on whose suffering is at stake, a distinct pathway centered on victim identity. Citizens find political failure more personally consequential and blame leaders more strongly when victims share their identity; they more readily tolerate the same failure when victims belong to another group. This bias recedes when crisis is widely understood as shared and indiscriminate. I test the claims using factorial vignette experiments that describe terrorist attacks among religious communities in Nigeria. The results show that in Lagos, where attacks are distant, Christians and Muslims blame government for violence when their own religious communities suffer but not when non-coreligionists suffer. In Maiduguri, where attacks are widespread, identity continues to shape perceived personal exposure but no longer structures blame. Shared victimhood decouples political blame from victim identity, transforming accountability from a group-contingent reaction into a collective claim.</p></details>
+        </article>
+        <article class="paper">
+          <h3>Eligibility, Identity, and Preferences for Programmatic Goods in Nigeria</h3>
+          <div class="m"><span class="status">Working Paper</span></div>
+        </article>
       </div>
 
       <div class="topic" id="goods">
-        <h3>Public Goods and Foreign Investment</h3>
-        <p class="blurb">What citizens want from government programmes and foreign-funded projects, and how they judge the powers behind them.</p>
-        <ul class="pubs">
-          <li><div class="t"><a href="https://peace-democracy.org/board/bbs/board.php?bo_table=journal_main&amp;wr_id=26">The US Inspires Dreams and China Gets Things Done: Gauging Global South Attachments to Major Powers with Evidence from Nigeria</a></div><div class="m">with John McCauley. <span class="status">Forthcoming, Peace &amp; Democracy</span> <a class="fn-link" href="fieldnotes.html#note-train">Field note</a></div></li>
-          <li><div class="t">Project Characteristics and Preferences over Foreign-Funded Initiatives: Evidence from Nigeria</div><div class="m">with John McCauley. <span class="status">Revise &amp; resubmit, Studies in Comparative International Development</span> <a class="fn-link" href="fieldnotes.html#note-train">Field note</a></div></li>
-          <li><div class="t">Do Road Networks Mitigate or Amplify the Spatial Heterogeneity of Urban Public Goods?</div><div class="m">Mushixue Zhang, Ge Shi, Jiantao Shi, Xiuling Zhang, Wei Wang, Lihang Feng, and Chuang Chen. <span class="status">Revise &amp; resubmit, Symmetry</span></div></li>
-          <li><div class="t">Eligibility, Identity, and Preferences for Programmatic Goods in Nigeria</div><div class="m">Solo-authored. <span class="status">Work in progress</span> <a class="fn-link" href="fieldnotes.html#note-lagos">Field note</a></div></li>
-        </ul>
+        <h2>Public Goods and Foreign Investment</h2>
+        <article class="paper">
+          <h3>The US Inspires Dreams and China Gets Things Done: Gauging Global South Attachments to Major Powers with Evidence from Nigeria</h3>
+          <div class="m">with John McCauley. <span class="status">Forthcoming, Peace &amp; Democracy</span> <a class="ms" href="https://peace-democracy.org/board/bbs/board.php?bo_table=journal_main&amp;wr_id=26">Manuscript</a></div>
+          <details><summary>Abstract</summary><p>How do citizens in the Global South form attachments to major powers competing for influence in their communities? Existing research focuses primarily on elite-level strategic motives or on the local impact of particular interventions. We argue, instead, that major powers that engage in development initiatives in the Global South form distinct reputations over time and that subsequent interventions activate those reputational assets, with some spillover into other dimensions of appeal. Drawing on an original, three-arm survey experiment conducted in Lagos, Nigeria, we examine perceptions of China and the US across four dimensions: their development model, partnership quality, operational effectiveness, and cultural appeal. At baseline, the results underscore distinct reputational pillars: China's reputation for operational effectiveness and the US's enduring cultural appeal. Upon treatment, the funder's nationality alone moves preferences toward the sponsoring power, but the effects differ in scope. US-funded projects draw on a broad, abstract reservoir of cultural goodwill that lifts perceptions of the US on every dimension. Chinese-funded projects confirm citizens' belief that China delivers and, notably, also raise interest in China's cultural appeal. These findings suggest that the nationality of a funder is legible to citizens, that soft power is multidimensional, and that major powers take distinct paths to influence.</p></details>
+        </article>
+        <article class="paper">
+          <h3>Project Characteristics and Preferences over Foreign-Funded Initiatives: Evidence from Nigeria</h3>
+          <div class="m">with John McCauley. <span class="status">Revise &amp; Resubmit, Studies in Comparative International Development</span></div>
+          <details><summary>Abstract</summary><p>What drives local perceptions of foreign-funded projects? Existing research focuses primarily on the investing country behind a project and, increasingly, on the features of projects themselves. We argue that, in low-income settings, support for foreign-funded projects turns most importantly on whether people find those projects useful in their own lives, and less on which power funds them. We test this claim with a visual vignette survey experiment in Lagos, Nigeria, in which respondents rated projects that varied along four dimensions: size, usefulness, environmental impact, and the foreign funder (China or the US). The findings indicate that usefulness is by far the strongest correlate of favorable evaluations, followed by environmental harm. Random assignment of projects likewise shows that size alone does not generate support, and a large but unhelpful project earns markedly less support than a small but useful one. Conditional on these features, respondents judge Chinese- and US-funded projects by similar standards; a tendency for US-funded projects to be penalized more for environmental harm is suggestive but not statistically robust. These results suggest that narratives of major power competition in Africa may obscure the more practical concerns on which local support actually rests.</p></details>
+        </article>
+        <article class="paper">
+          <h3>Do Road Networks Mitigate or Amplify the Spatial Heterogeneity of Urban Public Goods? Evidence from Nigeria</h3>
+          <div class="m">Mushixue Zhang, Ge Shi, Jiantao Shi, <strong>Xiuling Zhang</strong>, Wei Wang, Lihang Feng, and Chuang Chen. <span class="status">Revise &amp; Resubmit, Symmetry</span></div>
+          <details><summary>Abstract</summary><p>Road networks are often assumed to improve equitable access to urban public facilities, but their influence on measured inequality remains unclear in data-limited African cities. This study examines how measured inequality in access to hospitals, schools, and places of worship changes when road-network impedance is introduced in Lagos, Kano, Ibadan, Abuja, and Port Harcourt, Nigeria. Using OpenStreetMap data on a 500 m grid, we first assess the unevenness of facility locations without roads and then compare nearest-facility accessibility under straight-line distance, network distance, and two modeled travel-time scenarios. Inequality and clustering are measured with the Gini coefficient and Global Moran's <i>I</i> at grid, city, and administrative-unit scales. Facility locations are already highly uneven before roads are considered, with Gini values of 0.53 to 0.84. Relative to straight-line distance, network distance lowers measured inequality in 13 of 15 city-facility combinations, whereas modeled network travel time raises it in 11 of 15. These changes are small, with mean Gini differences of &minus;0.014 and +0.020, and not all are statistically significant. Grid-scale spatial clustering weakens in all 45 road-scenario comparisons, and 35 of these directions persist after aggregation to administrative units. These results suggest that road networks neither uniformly reduce nor uniformly amplify inequality in access; the outcome depends on how travel cost is measured and on the scale of analysis. Accessibility assessments should therefore compare several impedance definitions and scales and treat the results as potential accessibility until population-weighted, locally calibrated travel data are available.</p></details>
+        </article>
       </div>
 
       <div class="topic" id="violence">
-        <h3>Political Violence</h3>
-        <p class="blurb">How terrorist attacks reshape citizens' trust in democracy, their leaders, and their faith.</p>
-        <ul class="pubs">
-          <li><div class="t">The Democratic Costs of Terrorist Attacks in Africa</div><div class="m">with John McCauley and Trey Billing. <span class="status">Revise &amp; resubmit, Journal of Conflict Resolution</span></div><div class="note">Geocoded attacks linked to Afrobarometer surveys: attacks depress satisfaction with democracy and trust in the president within months, and non-fatal attacks do so as much as fatal ones.</div></li>
-          <li><div class="t">Terrorist Attacks and the Religiosity of Survivors</div><div class="m">with John McCauley and Trey Billing. <span class="status">Work in progress</span> Draft available upon request.</div></li>
-        </ul>
+        <h2>Political Violence</h2>
+        <article class="paper">
+          <h3>The Democratic Costs of Terrorist Attacks in Africa</h3>
+          <div class="m">with John McCauley and Trey Billing. <span class="status">Revise &amp; Resubmit, Journal of Conflict Resolution</span></div>
+          <details><summary>Abstract</summary><p>This study examines how terrorist attacks shape democratic preferences in Africa. Prior work disagrees over whether terrorism erodes support for civil liberties or inspires democratic engagement. We argue that exposure history helps explain these divergent responses. Linking 254,560 Afrobarometer respondents interviewed between 2002 and 2021 to 19,804 terrorist attacks, we compare exposure to no attack, one attack, or multiple attacks within 100 km in the preceding year. A single attack is associated with lower satisfaction with democracy and a short-lived decline in trust in leadership, whereas repeated attacks are associated with weaker democratic support in both electoral democracies and electoral autocracies. Repeated exposure also correlates with greater approval of military rule in electoral democracies, whereas in electoral autocracies, it is strongly associated with indifference over regime type. These findings have important implications for democratic attachments in the context of sustained terrorist violence.</p></details>
+        </article>
+        <article class="paper">
+          <h3>Terrorist Attacks and the Religiosity of Survivors</h3>
+          <div class="m">with John McCauley and Trey Billing. <span class="status">Working Paper</span></div>
+        </article>
       </div>
 
       <div class="topic" id="other">
-        <h3>Methods and Other Collaborations</h3>
-        <ul class="pubs">
-          <li><div class="t">Optimal Block Design for Vignette and Conjoint Experiments in Political Science</div><div class="m">with Peter Steiner. <span class="status">Work in progress</span></div></li>
-          <li><div class="t">Spatiotemporal Evolution and Nonlinear Factors Influencing Carbon Emissions in Nigeria</div><div class="m">Ge Shi, Yueming Zeng, Jiantao Shi, Boyuan Lu, Xiuling Zhang, Lin Sun, and Wei Wang. <span class="status">Revise &amp; resubmit, ISPRS International Journal of Geo-Information</span></div></li>
-        </ul>
+        <h2>Methods and Other Collaborations</h2>
+        <article class="paper">
+          <h3>Optimal Block Design for Vignette and Conjoint Experiments in Political Science</h3>
+          <div class="m">with Peter Steiner. <span class="status">Working Paper</span></div>
+        </article>
       </div>
-    </section>
-    <footer>Xiuling Zhang, 2026. Photographs from fieldwork in Nigeria.</footer>
-  </main>
+    </main>
+    <footer>&copy; 2026 Xiuling Zhang. Photographs from fieldwork in Nigeria.</footer>
+  </div>
 </div>
 </body>
 </html>

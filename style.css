@@ -1,0 +1,108 @@
+/* Shared by all five pages. Layout: full-width banner photo, then a left column (name, headshot, affiliation, links)
+   and a right column (tab navigation + page content). Indigo is the single accent. */
+:root {
+  --bg: #ffffff;
+  --surface: #f3f2ee;
+  --fg: #1d1c1a;
+  --muted: #62605a;
+  --line: #dedbd2;
+  --accent: #1f3f6e;
+  --accent-soft: #dde6f2;
+  --display: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --serif: "Merriweather", Georgia, "Times New Roman", serif;
+  --mono: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #15171c; --surface: #1d2027; --fg: #e9e6df; --muted: #a9a59b; --line: #343841; --accent: #9dbbe6; --accent-soft: #223149; color-scheme: dark; } }
+
+/* Source Han Serif SC, cut down to the three characters of the Chinese name (made from font/SourceHanSerifSC-VF.otf with fonttools) */
+@font-face { font-family: "Name ZH"; src: url("font/name-zh.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.65; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; line-height: 1.25; text-wrap: balance; }
+p { margin: 0 0 1rem; }
+
+/* banner */
+.hero { height: clamp(170px, 34vw, 500px); background: #0b0a10; overflow: hidden; }
+.hero img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 0% 45%; }
+
+/* two columns */
+.wrap { max-width: 1100px; margin-inline: auto; padding: 1.5rem 20px 4rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+@media (min-width: 820px) { .wrap { grid-template-columns: 240px minmax(0, 1fr); gap: 3.5rem; padding-top: 2.6rem; } }
+
+/* left column */
+.side { min-width: 0; display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 1rem; align-items: start; }
+.side h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.01em; grid-column: 2; }
+.side .zh { grid-column: 2; font-size: 1.15rem; color: var(--muted); letter-spacing: 0.08em; font-family: "Name ZH", "Source Han Serif SC", "Source Han Serif CN", "Noto Serif SC", "Songti SC", SimSun, serif; font-weight: 500; }
+.side h1 a { color: inherit; text-decoration: none; }
+.side .photo { grid-column: 1; grid-row: 1 / span 4; border-radius: 6px; overflow: hidden; background: var(--surface); aspect-ratio: 4 / 5; }
+.side .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.side .title { grid-column: 2; color: var(--muted); font-size: 0.86rem; line-height: 1.5; margin-top: 0.3rem; }
+.side .links { grid-column: 2; list-style: none; margin: 0.5rem 0 0; padding: 0; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; }
+.side .links a { color: var(--muted); text-decoration: none; }
+.side .links a:hover { color: var(--accent); text-decoration: underline; }
+@media (min-width: 820px) {
+  .side { display: block; }
+  .side h1 { text-align: center; }
+  .side .zh { text-align: center; margin: 0.15rem 0 1.1rem; }
+  .side .photo { width: 100%; }
+  .side .title { margin-top: 1.1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+  .side .links { display: grid; gap: 0.45rem; margin-top: 1rem; }
+}
+
+/* tabs */
+.content { min-width: 0; }
+.tabs { border-bottom: 1px solid var(--line); margin-bottom: 1.6rem; overflow-x: auto; }
+.tabs ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.tabs a { display: block; padding: 0.55rem 0.95rem; color: var(--muted); text-decoration: none; font-size: 0.95rem; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs a:hover { color: var(--fg); }
+.tabs a[aria-current="page"] { color: var(--fg); font-weight: 600; border-bottom-color: var(--fg); }
+
+main { min-width: 0; }
+main > p { max-width: 70ch; }
+h2.sub { font-family: var(--display); font-size: 1.35rem; font-weight: 500; margin-bottom: 1rem; }
+.tags { list-style: none; margin: 1.2rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.tags li { background: var(--surface); border-radius: 4px; padding: 0.2rem 0.6rem; font-size: 0.85rem; }
+footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 2.5rem; }
+
+body.about .wrap { padding-bottom: 14rem; }
+body.about main > p { font-family: var(--serif); font-size: 0.95rem; line-height: 1.85; }
+
+/* research */
+.topic + .topic { margin-top: 2.6rem; }
+.topic h2 { font-family: var(--display); font-size: 1.5rem; font-weight: 600; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); margin-bottom: 0.4rem; }
+.paper { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.paper:last-child { border-bottom: 0; }
+.paper h3 { font-family: var(--serif); font-size: 0.98rem; font-weight: 700; line-height: 1.5; text-wrap: pretty; }
+.paper .m { color: var(--muted); font-size: 0.93rem; margin-top: 0.25rem; }
+.paper .status { font-size: inherit; color: var(--accent); background: var(--accent-soft); padding: 0.05rem 0.45rem; border-radius: 3px; }
+.paper .ms { font-size: 0.88rem; margin-left: 0.4rem; white-space: nowrap; }
+.paper details { margin-top: 0.45rem; }
+.paper summary { cursor: pointer; font-size: 0.88rem; color: var(--accent); width: fit-content; }
+.paper details p { margin: 0.6rem 0 0; font-family: var(--serif); font-size: 0.88rem; line-height: 1.8; max-width: 72ch; }
+
+/* teaching */
+.courses { display: grid; gap: 0.7rem; margin: 0 0 1.2rem; }
+.courses div { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 0.5rem 1rem; }
+.courses dt { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); padding-top: 0.25rem; }
+.courses dd { margin: 0; }
+.prepared { color: var(--muted); font-size: 0.95rem; }
+
+/* fieldwork gallery: photos with one-line captions */
+.notes-intro { color: var(--muted); }
+.shots { display: grid; gap: 1.4rem 0.8rem; grid-template-columns: repeat(12, 1fr); margin: 0; }
+.shots figure { margin: 0; min-width: 0; grid-column: span 12; }
+.shots a { display: block; border-radius: 4px; overflow: hidden; background: var(--surface); }
+.shots img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+.shots .wide img { aspect-ratio: 16 / 9; }
+.shots .tall img { aspect-ratio: 3 / 4; }
+.shots figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 0.45rem; line-height: 1.5; }
+@media (min-width: 640px) { .shots .w6 { grid-column: span 6; } }
+
+/* cv */
+.cvbox { background: var(--surface); border: 1px solid var(--line); padding: 1rem 1.2rem; border-radius: 4px; display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; align-items: baseline; }
+.pdf { display: block; width: 100%; height: 82vh; margin-top: 1.25rem; border: 1px solid var(--line); border-radius: 4px; }
