@@ -61,8 +61,8 @@ p { margin: 0 0 1rem; }
 /* tabs */
 .content { min-width: 0; }
 .tabs { border-bottom: 1px solid var(--line); margin-bottom: 1.6rem; overflow-x: auto; }
-.tabs ul { list-style: none; margin: 0; padding: 0; display: flex; }
-.tabs a { display: block; padding: 0.55rem 0.95rem; color: var(--muted); text-decoration: none; font-size: 0.95rem; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.6rem; }
+.tabs a { display: block; padding: 0.7rem 1.4rem; color: var(--muted); text-decoration: none; font-size: 0.95rem; white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; }
 .tabs a:hover { color: var(--fg); }
 .tabs a[aria-current="page"] { color: var(--fg); font-weight: 600; border-bottom-color: var(--fg); }
 
